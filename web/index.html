@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Firebase</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+
+  <!-- css material design for bootstrap -->
+  <link href="./bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css" rel="stylesheet">
+  <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="container">
+
+      <h1>Chat Firebase</h1> <small>Luis Esteban</small>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="panel panel-warning">
+        <!-- <div class="panel-heading">
+          <h3 class="panel-title">Panel warning</h3>
+        </div> -->
+        <div class="panel-body">
+          <div>
+            <h3>Para ingresar debes digitar tu nombre</h3>
+            <a href="javascript:void(0)" class="btn btn-raised btn-principal">Ingresar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- js material design for bootstrap -->
+  <script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyASAvIIXEEUka-xcUD2moSAbNY4vC8B5w0",
+      authDomain: "chat-8743d.firebaseapp.com",
+      databaseURL: "https://chat-8743d.firebaseio.com",
+      storageBucket: "chat-8743d.appspot.com",
+      messagingSenderId: "164421558300"
+    };
+    firebase.initializeApp(config);
+
+    function writePush(llave, valor){
+      firebase.database().ref().push({
+        msj: valor,
+        email: llave
+      });
+    }
+
+    //writePush('luis', 'hola mundo');
+
+  </script>
+
+</body>
+</html>

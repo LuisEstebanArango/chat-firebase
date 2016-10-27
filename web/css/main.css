@@ -1,0 +1,13 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron{
+  background-color: #FFEB3B;
+}
+
+.btn-principal {
+  color: #fff !important;
+  background-color: #FBC02D !important;
+  border-color: #FBC02D !important;
+}
