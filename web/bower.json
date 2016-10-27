@@ -1,0 +1,10 @@
+{
+  "name": "chat-firebase",
+  "homepage": "https://github.com/LuisEstebanArango/chat-firebase",
+  "authors": [
+    "luisesteban <estebanarango14@hotmail.com>"
+  ],
+  "description": "chat usando recursos de firebase",
+  "main": "",
+  "license": "MIT"
+}
