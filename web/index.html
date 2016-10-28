@@ -14,28 +14,12 @@
   <link href="./bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css" rel="stylesheet">
   <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="jumbotron">
-    <div class="container">
+<body ng-app="chat">
 
-      <h1>Chat Firebase</h1> <small>Luis Esteban</small>
-    </div>
-  </div>
+  <div ng-include="'views/header.html'"></div>
 
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-      <div class="panel panel-warning">
-        <!-- <div class="panel-heading">
-          <h3 class="panel-title">Panel warning</h3>
-        </div> -->
-        <div class="panel-body">
-          <div>
-            <h3>Para ingresar debes digitar tu nombre</h3>
-            <a href="javascript:void(0)" class="btn btn-raised btn-principal">Ingresar</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container-fluid"> <!-- id="contenido">-->
+    <div ng-view></div>
   </div>
 
 
@@ -49,8 +33,15 @@
   <script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
   <script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
 
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-route/angular-route.min.js"></script>
+
+  <script src="./scripts/app.js"></script>
+
+
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script>
+    $.material.init();
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyASAvIIXEEUka-xcUD2moSAbNY4vC8B5w0",

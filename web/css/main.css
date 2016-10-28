@@ -4,10 +4,21 @@ body {
 
 .jumbotron{
   background-color: #FFEB3B;
+  color: #fff;
+}
+
+.jumbotron small{
+  /* color: #fff; */
+  color: #000;
 }
 
 .btn-principal {
   color: #fff !important;
   background-color: #FBC02D !important;
   border-color: #FBC02D !important;
+}
+
+#nick {
+  padding-left: 5em;
+  padding-right: 5em;
 }
