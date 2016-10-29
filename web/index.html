@@ -13,6 +13,7 @@
   <!-- css material design for bootstrap -->
   <link href="./bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css" rel="stylesheet">
   <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+  <link href="./bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
 </head>
 <body ng-app="chat">
 
@@ -23,25 +24,9 @@
   </div>
 
 
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <!-- js material design for bootstrap -->
-  <script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
-  <script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-
-  <script src="./bower_components/angular/angular.min.js"></script>
-  <script src="./bower_components/angular-route/angular-route.min.js"></script>
-
-  <script src="./scripts/app.js"></script>
-
-
   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script>
-    $.material.init();
+
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyASAvIIXEEUka-xcUD2moSAbNY4vC8B5w0",
@@ -62,6 +47,23 @@
     //writePush('luis', 'hola mundo');
 
   </script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- js material design for bootstrap -->
+  <script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+  <script src="./bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-route/angular-route.min.js"></script>
+
+  <script src="./scripts/app.js"></script>
+
+
 
 </body>
 </html>
