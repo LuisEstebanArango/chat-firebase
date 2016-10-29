@@ -8,13 +8,13 @@
           <div id="nick">
             <div class="form-group label-floating">
               <label for="i5" class="control-label">nick</label>
-              <input type="text" class="form-control" id="i5">
+              <input type="text" class="form-control" id="i5" ng-model="nickController.nick">
             </div>
           </div>
 
           </br>
           <div class="text-center">
-            <a href="javascript:void(0)" class="btn btn-raised btn-principal">Ingresar</a>
+            <button class="btn btn-raised btn-principal" ng-click="nickController.saveNick()">Ingresar</button>
           </div>
         </div>
       </div>
