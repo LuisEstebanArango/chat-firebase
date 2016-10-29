@@ -5,6 +5,7 @@ body {
 .jumbotron{
   background-color: #FFEB3B;
   color: #fff;
+  margin-bottom: 0px !important;
 }
 
 .jumbotron small{
@@ -22,3 +23,14 @@ body {
   padding-left: 5em;
   padding-right: 5em;
 }
+
+#send-msg {
+  margin-top: 28px;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* https://www.google.com.co/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=bootstrap%20row%20full%20page%20height */
