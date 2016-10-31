@@ -5,7 +5,36 @@ body {
 .jumbotron{
   background-color: #FFEB3B;
   color: #fff;
+  margin-bottom: 3em !important;
+}
+
+.jumbotron .nick{
+
+}
+
+.jumbotron.chat {
+  /* this is the actual change to the elment
+   *  which has nothing to do with the animation
+   */
+  padding-bottom: 10px !important;
+  padding-top: 0px !important;
   margin-bottom: 0px !important;
+}
+.jumbotron.chat-add,
+.jumbotron.chat-remove {
+  /* Here we specify the transition property and
+   * initial state of the animation, which is hidden
+   * state having 0 opacity
+   */
+  opacity: 0.8;
+  transition: opacity 3s, 0.8s padding ease-out;
+}
+.jumbotron.chat-add-active,
+.jumbotron.chat-remove-active {
+  /* Here we specify the final state of the animation,
+   * which is visible having 1 opacity
+   */
+  opacity: 1;
 }
 
 .jumbotron small{

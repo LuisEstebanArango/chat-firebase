@@ -2,7 +2,7 @@
 
   'use strict';
 
-  var app = angular.module('chat', ['ngRoute']);
+  var app = angular.module('chat', ['ngRoute', 'ngAnimate']);
 
   app.config(function ($routeProvider) {
     $routeProvider
@@ -23,8 +23,9 @@
 
   app.controller('NickController', ['$location', '$rootScope', function ($location, $rootScope) {
     var nickController = this;
-    nickController.nick = 'goku';
+    nickController.nick = '';
     nickController.saveNick = saveNick;
+    $rootScope.inside = '';
     activate();
 
     function activate(){
@@ -46,6 +47,7 @@
   app.controller('ChatController', ['$location', '$rootScope', function ($location, $rootScope) {
     var chatController = this;
     chatController.saveNick   = saveNick;
+    $rootScope.inside = 'chat';
     chatController.writePush  = writePush;
     activate();
 
