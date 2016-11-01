@@ -2,7 +2,7 @@
 
   'use strict';
 
-  var app = angular.module('chat', ['ngRoute', 'ngAnimate']);
+  var app = angular.module('chat', ['ngRoute', 'ngAnimate', 'firebase']);
 
   app.config(function ($routeProvider) {
     $routeProvider
@@ -44,15 +44,36 @@
 
   }]);
 
-  app.controller('ChatController', ['$location', '$rootScope', function ($location, $rootScope) {
+  app.controller('ChatController', ['$location', '$rootScope', '$firebaseObject', function ($location, $rootScope, $firebaseObject) {
     var chatController = this;
     chatController.saveNick   = saveNick;
-    $rootScope.inside = 'chat';
     chatController.writePush  = writePush;
+    $rootScope.inside         = 'chat';
+    chatController.datos      = {};
+
+    var ref = firebase.database().ref();
+    var syncObject = $firebaseObject(ref);
+    syncObject.$bindTo(chatController.datos, "data");
+
     activate();
 
     function activate(){
       $.material.init();
+
+      syncObject.$loaded()
+        .then(function(data) {
+          syncObject.data.push({email: "anna", msj: "que mas"});
+          syncObject.$save().then(function(ref) {
+
+          }, function(error) {
+            console.log("Error:", error);
+          });
+        })
+        .catch(function(error) {
+          console.error("Error:", error);
+        });
+
+
     }
 
     function saveNick(){
