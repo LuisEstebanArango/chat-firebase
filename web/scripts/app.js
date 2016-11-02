@@ -44,51 +44,39 @@
 
   }]);
 
-  app.controller('ChatController', ['$location', '$rootScope', '$firebaseObject', function ($location, $rootScope, $firebaseObject) {
+  app.controller('ChatController', ['$location', '$rootScope', '$firebaseObject', '$firebaseArray',
+    function ($location, $rootScope, $firebaseObject, $firebaseArray) {
     var chatController = this;
-    chatController.saveNick   = saveNick;
     chatController.writePush  = writePush;
     $rootScope.inside         = 'chat';
+    chatController.msj        = '';
     chatController.datos      = {};
 
     var ref = firebase.database().ref();
-    var syncObject = $firebaseObject(ref);
-    syncObject.$bindTo(chatController.datos, "data");
+    chatController.datos = $firebaseArray(ref);
 
     activate();
 
     function activate(){
       $.material.init();
-
-      syncObject.$loaded()
-        .then(function(data) {
-          syncObject.data.push({email: "anna", msj: "que mas"});
-          syncObject.$save().then(function(ref) {
-
-          }, function(error) {
-            console.log("Error:", error);
-          });
-        })
-        .catch(function(error) {
-          console.error("Error:", error);
-        });
-
-
-    }
-
-    function saveNick(){
-      if( chatController.nick == '' || chatController.nick == undefined ){
-        swal("Oops...", "Something went wrong!", "error");
-      } else {
-        $location.path('/chat');
+      if( $rootScope.nick == '' || $rootScope.nick == undefined ){
+        $location.path('/');
       }
     }
 
-    function writePush(llave, valor){
-      firebase.database().ref().push({
-        msj: valor,
-        email: llave
-      });
+    function writePush(){
+      if( chatController.msj == '' ) {
+        swal("Falta el mensaje");
+      } else {
+        chatController.datos.$add({
+            nick: $rootScope.nick,
+            msj: chatController.msj
+          }).then(function(ref) {
+            chatController.msj = '';
+            console.log(chatController.datos);
+        });
+      }
+
     }
 
 

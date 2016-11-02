@@ -8,19 +8,19 @@
       <div class="row">
         <div class="col-sm-12">
           <ul id="messages">
-            <li ng-repeat="dato in chatController.datos.data">{{dato.email + " --> " + dato.msj}}</li>
+            <li ng-repeat="dato in chatController.datos">{{dato.nick + " --> " + dato.msj}}</li>
           </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-10">
           <div class="form-group">
-            <textarea class="form-control" placeholder="mensaje"></textarea>
+            <textarea class="form-control" placeholder="mensaje" ng-model="chatController.msj"></textarea>
           </div>
         </div>
         <div class="col-sm-2">
           <!-- <button class="btn btn-default">Submit</button> -->
-          <a href="javascript:void(0)" class="btn btn-principal btn-fab" id="send-msg"><i class="material-icons">send</i></a>
+          <a href="javascript:void(0)" class="btn btn-principal btn-fab" id="send-msg" ng-click="chatController.writePush()"><i class="material-icons">send</i></a>
         </div>
       </div>
     </div>
