@@ -63,3 +63,7 @@ body {
   padding: 0;
 }
 /* https://www.google.com.co/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=bootstrap%20row%20full%20page%20height */
+
+#luis-github {
+  text-decoration: none !important;
+}
