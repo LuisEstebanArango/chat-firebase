@@ -5,7 +5,7 @@ body {
 .jumbotron{
   background-color: #FFEB3B;
   color: #fff;
-  margin-bottom: 3em !important;
+  margin-bottom: 0em !important;
 }
 
 .jumbotron .nick{
@@ -18,7 +18,7 @@ body {
    */
   padding-bottom: 10px !important;
   padding-top: 0px !important;
-  margin-bottom: 0px !important;
+  /* margin-bottom: 0px !important; */
 }
 .jumbotron.chat-add,
 .jumbotron.chat-remove {
@@ -66,4 +66,10 @@ body {
 
 #luis-github {
   text-decoration: none !important;
+}
+
+#test {
+  index: 50;
+  top: 300px;
+  position: absolute;
 }
