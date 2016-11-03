@@ -14,7 +14,7 @@
     "angular-animate": "^1.5.8",
     "angularfire": "^2.1.0",
     "bootstrap": "^3.3.7",
-    "bootstrap-material-design": "^4.0.2",
+    "bootstrap-material-design": "v0.5.10",
     "firebase": "^3.5.3",
     "jquery": "^3.1.1"
   }
