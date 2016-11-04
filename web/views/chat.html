@@ -1,17 +1,22 @@
-<div class="containers">
+<div class="containers" id="principal">
   <div class="row">
     <div class="col-sm-2">
-      salas
+      <div id="salas-div">
+        salas
+      </div>
     </div>
 
     <div class="col-sm-10">
       <div class="row">
         <div class="col-sm-12">
-          <ul id="messages">
-            <li ng-repeat="dato in chatController.datos">{{dato.nick + " --> " + dato.msj}}</li>
-          </ul>
+          <div id="mensajes-div">
+            <p class="mensaje-item" ng-repeat="dato in chatController.datos">
+              {{dato.nick + " - " + dato.msj}}
+            </p>
+          </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-10">
           <div class="form-group">

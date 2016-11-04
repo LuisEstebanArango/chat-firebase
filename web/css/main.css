@@ -56,12 +56,6 @@ body {
 #send-msg {
   margin-top: 28px;
 }
-
-#messages {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 /* https://www.google.com.co/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=bootstrap%20row%20full%20page%20height */
 
 #luis-github {
@@ -73,3 +67,54 @@ body {
   top: 300px;
   position: absolute;
 }
+
+#principal {
+  background-color: #FFF9C4;
+  border-radius: 0px 0px 18px 18px;
+  -moz-border-radius: 0px 0px 18px 18px;
+  -webkit-border-radius: 0px 0px 18px 18px;
+  border: 0px solid #000000;
+}
+
+#salas-div {
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+
+  margin-top: 8px;
+  margin-left: 8px;
+  padding: 5px;
+}
+
+#mensajes-div {
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+
+  margin-top: 8px;
+  margin-right: 12px;
+  padding: 5px;
+}
+
+.mensaje-item {
+  background-color: #00BCD4;
+  color: #fff;
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border: 0px solid #000000;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  display: table;
+}
+

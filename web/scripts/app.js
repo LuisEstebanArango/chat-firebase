@@ -59,9 +59,9 @@
 
     function activate(){
       $.material.init();
-      if( $rootScope.nick == '' || $rootScope.nick == undefined ){
-        $location.path('/');
-      }
+      // if( $rootScope.nick == '' || $rootScope.nick == undefined ){
+      //   $location.path('/');
+      // }
     }
 
     function writePush(){
