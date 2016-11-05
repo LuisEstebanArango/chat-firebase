@@ -7,26 +7,35 @@
     </div>
 
     <div class="col-sm-10">
-      <div class="row">
-        <div class="col-sm-12">
-          <div id="mensajes-div">
-            <p class="mensaje-item" ng-repeat="dato in chatController.datos">
-              {{dato.nick + " - " + dato.msj}}
-            </p>
-          </div>
-        </div>
-      </div>
+      <div id="mensajes-div-main">
 
-      <div class="row">
-        <div class="col-sm-10">
-          <div class="form-group">
-            <textarea class="form-control" placeholder="mensaje" ng-model="chatController.msj"></textarea>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="mensajes-div">
+              <div ng-repeat="dato in chatController.datos" class="mensaje-item">
+                <p class="mensaje-item-nick">
+                  {{dato.nick}}
+                </p>
+                <p class="mensaje-item-msj" ng-class="{ 'mensaje-item-msj-yo' : chatController.soyYo(dato)}">
+                  {{dato.msj}}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-sm-2">
-          <!-- <button class="btn btn-default">Submit</button> -->
-          <a href="javascript:void(0)" class="btn btn-principal btn-fab" id="send-msg" ng-click="chatController.writePush()"><i class="material-icons">send</i></a>
+
+        <div class="row">
+          <div class="col-sm-10">
+            <div class="form-group">
+              <textarea class="form-control" placeholder="mensaje" ng-model="chatController.msj"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <!-- <button class="btn btn-default">Submit</button> -->
+            <a href="javascript:void(0)" class="btn btn-principal btn-fab" id="send-msg" ng-click="chatController.writePush()"><i class="material-icons">send</i></a>
+          </div>
         </div>
+
       </div>
     </div>
   </div>

@@ -48,6 +48,7 @@
     function ($location, $rootScope, $firebaseObject, $firebaseArray) {
     var chatController = this;
     chatController.writePush  = writePush;
+    chatController.soyYo      = soyYo;
     $rootScope.inside         = 'chat';
     chatController.msj        = '';
     chatController.datos      = {};
@@ -76,9 +77,11 @@
             console.log(chatController.datos);
         });
       }
-
     }
 
+    function soyYo(dato){
+      return dato.nick == $rootScope.nick;
+    }
 
   }]);
 
