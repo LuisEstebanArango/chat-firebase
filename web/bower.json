@@ -17,6 +17,7 @@
     "bootstrap-material-design": "v0.5.10",
     "firebase": "^3.5.3",
     "jquery": "^3.1.1",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }

@@ -136,4 +136,8 @@ p {
   display: table;
 }
 
+.fa-github:before {
+    color: black !important;
+}
+
 
