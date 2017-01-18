@@ -86,6 +86,13 @@ body {
   margin-top: 8px;
   margin-left: 8px;
   padding: 5px;
+  height: 100%;
+}
+
+/* Menu Sala */
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: black !important;
+  background-color: #eeeeee !important;
 }
 
 #mensajes-div {
